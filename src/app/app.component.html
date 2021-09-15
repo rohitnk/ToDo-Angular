@@ -1,0 +1,21 @@
+<div class="viewPort">
+  <div class="mainContainer">
+    <input
+      id="task"
+      placeholder="Enter the task"
+      type="text"
+      [(ngModel)]="taskName"
+    />
+    <button id="add" (click)="add()" [disabled]="btnEnable">Add</button>
+  </div>
+  <div class="listContainer">
+    <ul>
+      <div *ngFor="let el of tasks">
+        <app-task
+          [taskDesc]="el"
+          (deleteElmt)="deleteElement($event)"
+        ></app-task>
+      </div>
+    </ul>
+  </div>
+</div>

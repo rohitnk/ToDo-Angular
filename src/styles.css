@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+.task {
+  margin: 8px;
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  border: 2px solid blue;
+  padding: 5px;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  font: 400 13.3333px Arial;
+  background: rgb(224, 210, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(224, 210, 226, 1) 15%,
+    rgba(209, 153, 255, 1) 100%
+  );
+}
+
+.mainContainer {
+  /* height: 100vh; */
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* border: 2px solid black; */
+}
+.viewPort {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  background: rgb(237, 112, 255);
+  background: linear-gradient(
+    45deg,
+    rgb(134 139 231) 15%,
+    rgb(235 186 255) 100%
+  );
+  color: white;
+  height: 50px;
+  width: 90%;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 5px solid white;
+}
+#add {
+  height: 47px;
+  width: 100px;
+  border-radius: 7px;
+  margin-left: 5px;
+}
+.listContainer {
+  border: 5px solid white;
+  padding: 025px 50px 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  width: 50%;
+  height: auto;
+  min-height: 50px;
+  transition: all 0.4s ease-out;
+}
+.listItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45vw;
+  height: 50px;
+  margin-bottom: 12px;
+  border-radius: 15px;
+  border: 5px solid white;
+  background: rgb(134, 247, 231);
+  background: linear-gradient(90deg, rgb(177 100 255) 21%, rgb(118 73 255) 84%);
+}
+.listItemp {
+  font-size: 20px;
+  margin: 20px;
+  color: white;
+  z-index: 2;
+}
+button {
+  margin: 10px;
+  border: 3px solid white;
+}
+input {
+  text-indent: 10px;
+}
+
+.slide-fade .listItem {
+  transition: all 0.4s ease-out;
+  opacity: 0;
+}
+.slide-fade .listItem.show {
+  opacity: 1;
+}
+
+::placeholder {
+  color: #ffffff73;
+  opacity: 1;
+}
+
+.listItem button {
+  position: relative;
+  height: 2em;
+  margin-right: 1em;
+  width: 5em;
+  border-radius: 6em;
+  z-index: 2;
+}
+
+.listItem::before {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.8s ease-in-out;
+  opacity: 1;
+}
+
+.listItem:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: 0.8s ease-in-out;
+  opacity: 1;
+}
+
+.listItem::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 10;
+  right: 10;
+  bottom: 10;
+  left: 10;
+  border-radius: 10px;
+  inset: 0 0 0 0;
+  background: #ff00bc8c;
+  z-index: 1;
+  transition: transform 1s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
