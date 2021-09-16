@@ -9,8 +9,6 @@ export class AppComponent {
   title = 'my-app';
   taskName = '';
   tasks: String[] = [];
-  btnEnable = false;
-  hasElement: boolean = false;
 
   add() {
     if (this.taskName === '' || this.tasks.includes(this.taskName)) return;
@@ -19,7 +17,7 @@ export class AppComponent {
   }
 
   deleteElement(el: String) {
-    console.log('delete triggered from parent');
+    // console.log('delete triggered from parent');
     this.tasks = this.tasks.filter((el2) => el !== el2);
   }
 }

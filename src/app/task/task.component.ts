@@ -12,7 +12,7 @@ export class TaskComponent implements OnInit {
   constructor() {}
 
   delete(ev: String) {
-    console.log('delete triggered from child');
+    // console.log('delete triggered from child');
     this.deleteElmt.emit(ev);
   }
 
